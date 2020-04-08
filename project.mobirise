@@ -1,0 +1,99 @@
+{
+  "settings": {
+    "currentPage": "index.html",
+    "theme": {
+      "name": "trainingamp",
+      "title": "TrainingAMP",
+      "styling": {
+        "primaryColor": "#2ca438",
+        "secondaryColor": "#000f36",
+        "successColor": "#365c9a",
+        "infoColor": "#e96188",
+        "warningColor": "#fac769",
+        "dangerColor": "#b2ccd2",
+        "mainFont": "Red Hat Text",
+        "display1Font": "Red Hat Text",
+        "display1Size": 5.8,
+        "display2Font": "Red Hat Text",
+        "display2Size": 3.4,
+        "display5Font": "Red Hat Text",
+        "display5Size": 1.5,
+        "display7Font": "Red Hat Text",
+        "display7Size": 1.2,
+        "display4Font": "Red Hat Text",
+        "display4Size": 0.9,
+        "isRoundedButtons": true,
+        "isScrollToTopButton": false,
+        "arrowColor": "#2ca438"
+      },
+      "titlePreset": "Performance Gym",
+      "nameSelectPreset": "gym"
+    },
+    "path": "@PROJECT_PATH@",
+    "name": "Site-03-26_1004",
+    "versionFirst": "4.12.3",
+    "siteFonts": [
+      {
+        "css": "'Red Hat Text', sans-serif",
+        "name": "Red Hat Text",
+        "url": "https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,500,500i,700,700i"
+      }
+    ],
+    "imageResize": true,
+    "uniqCompNum": 1,
+    "versionPublish": "4.12.3",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-section-title": {
+              "color": "#000f36"
+            },
+            ".mbr-text3": {
+              "text-decoration": "underline",
+              "color": "#2ca438"
+            },
+            "h1": {
+              "color": "#2ca438",
+              "border-bottom": "6px solid @border"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"Content1\" group=\"Content\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"4\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText2\" checked>\n        <input type=\"checkbox\" title=\"Link\" name=\"showText3\">\n        <header>Color</header>\n        <input type=\"color\" name=\"border\" title=\"Border Color\" value=\"#efefef\" selected>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-m-auto mbr-col-lg-12\">\n                <div class=\"content\">\n                    <h1 class=\"mbr-section-title align-left mbr-fonts-style mbr-pb-1 mbr-semibold\" mbr-if=\"showTitle\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\">Alabama Permit Information&nbsp;</h1>\n\n                    <p class=\"mbr-text2 align-left mbr-regular mbr-pt-5 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText2\" data-app-selector=\".mbr-text2\">Application Fee - $100.00<br><br>Where to submit your application - In person at your local sheriffs office for the county in which you reside. \n<br><br>Photo Requirement -&nbsp;None specified<br><br>Application Link -&nbsp;<a href=\"https://www.alabamasheriffs.com/county_map/\" target=\"_blank\">https://www.alabamasheriffs.com/county_map/</a><br><br>Processing Time - 30 Days<br><br>Minimum Age - 18<br><br>Valid For &nbsp;1 -5 Years<br><br>Reciprocity Link -&nbsp;<a href=\"https://www.alea.gov/gun-laws\" target=\"_blank\">https://www.alea.gov/gun-laws</a></p>\n                    <p class=\"mbr-text3 mbr-pt-4 align-left mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText3\" data-app-selector=\".mbr-text3\"><a href=\"#\" class=\"text-primary\">read more\n                            &gt;</a></p>\n\n\n\n\n                </div>\n            </div>\n\n\n\n\n        </div>\n\n\n\n\n\n\n\n    </div>\n</section>",
+          "_cid": "rVABGUfUwM",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-0"
+        }
+      ]
+    }
+  }
+}
